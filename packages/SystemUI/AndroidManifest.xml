@@ -388,7 +388,7 @@
                   android:theme="@style/ExTunerSettings"
                   android:label="@string/nav_bar"
                   android:process=":tuner"
-                  android:parentActivityName="com.havoc.config.center.fragments.Navigation"
+                  android:parentActivityName="com.legion.settings.NavigationSettings"
                   android:exported="true">
         </activity>
 
