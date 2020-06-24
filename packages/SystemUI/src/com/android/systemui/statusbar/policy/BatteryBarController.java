@@ -200,12 +200,10 @@ public class BatteryBarController extends LinearLayout {
         if (mLocation > 0 && isLocationValid(mLocation)) {
             removeBars();
             addBars();
-            // Visibility handled externally
-            //setVisibility(View.VISIBLE);
+            setVisibility(View.VISIBLE);
         } else {
             removeBars();
-            // Visibility handled externally (after removing bars we're not visible either way)
-            //setVisibility(View.GONE);
+            setVisibility(View.GONE);
         }
     }
 

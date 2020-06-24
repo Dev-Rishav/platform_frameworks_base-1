@@ -84,8 +84,6 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
     private ContentResolver mContentResolver;
     private boolean mShowClock = true;
 
-    private View mBatteryBar;
-
     private class SettingsObserver extends ContentObserver {
        SettingsObserver(Handler handler) {
            super(handler);
@@ -166,7 +164,6 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
         mClockView = mStatusBar.findViewById(R.id.clock);
         mCenterClockLayout = (LinearLayout) mStatusBar.findViewById(R.id.center_clock_layout);
         mRightClock = mStatusBar.findViewById(R.id.right_clock);
-        mBatteryBar = mStatusBar.findViewById(R.id.battery_bar);
         showSystemIconArea(false);
         initEmergencyCryptkeeperText();
 	animateHide(mClockView, false, false);
@@ -314,7 +311,6 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
             animateHide(mRightClock, animate, true);
         }
         animateHide(mSystemIconArea, animate, true);
-        animateHide(mBatteryBar, animate, true));
     }
 
     public void showSystemIconArea(boolean animate) {
@@ -323,7 +319,6 @@ public class CollapsedStatusBarFragment extends Fragment implements CommandQueue
             animateShow(mRightClock, animate);
         }
         animateShow(mSystemIconArea, animate);
-        animateShow(mBatteryBar, animate);
     }
 
     public void hideNotificationIconArea(boolean animate) {
